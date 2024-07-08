@@ -1,0 +1,26 @@
+server:
+  port: 8080
+spring:
+  application:
+    name: practica-reactive-01
+
+#Configuracion BD
+  r2dbc:
+    username: postgres
+    password: mipass
+    url: r2dbc:postgresql://localhost:5432/springnative_bd
+#Kafka
+  kafka:
+    producer:
+      bootstrap-servers: localhost:9092
+      key-serializer: org.apache.kafka.common.serialization.StringSerializer
+      value-serializer: org.apache.kafka.common.serialization.StringSerializer
+
+      
+
+springdoc:
+  api-docs:
+    enabled: true
+  swagger-ui:
+    enabled: true
+    #path: /swagger-ui.html
